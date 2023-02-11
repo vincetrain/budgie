@@ -1,0 +1,26 @@
+.BoxContainer {
+    display: flex;
+}
+
+.TermContainer {
+    margin: auto;
+    width: 40%;
+    height: 20lh;
+    border: 3px solid green;
+}
+
+.TermContainer h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.TermTitle {
+}
+
+.TermBox {
+    display: inline-block;
+    background-color: #c8ecb4;
+    width: 40%;
+    height: 70%;
+    border: 3px solid red;
+}

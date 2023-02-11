@@ -32,8 +32,8 @@ function Expenses() {
 		console.log(expense)
 		return (
  			<div className='chart smallChart' key={index}>
-				<ResponsiveContainer>
- 					<PieChart width={400} height={400}>
+				<ResponsiveContainer width={400} height="100%">
+ 					<PieChart>
  						<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
  					</PieChart>
 				</ResponsiveContainer>

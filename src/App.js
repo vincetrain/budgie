@@ -1,9 +1,9 @@
-import './Expenses.scss';
+import './App.css';
 import React from 'react';
 import {PieChart, Pie} from 'recharts';
 
 
-function Expenses() {
+function App() {
   
   const data = [
     {name: 'homeUtil', money: 4600, fill: '#004A62'},
@@ -62,4 +62,4 @@ function Expenses() {
 }
 
 
-export default Expenses;
+export default App;

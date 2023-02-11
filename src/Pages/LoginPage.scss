@@ -39,14 +39,25 @@
     letter-spacing: 0.08em;
     color: #5ec57e;
     font-weight: lighter;
-    font-size: 40px;
+    font-size: 220%;
 }
 
 .WordsContainer p {
     margin-left: 0em;
     text-transform: none;
     color: #347571;
+    font-size: 140%;
     letter-spacing: 0em;
     line-height: 1.3em;
     direction: ltr;
+}
+
+.InputSpaces h4 {
+    margin-left: 0em;
+    color: #347571;
+    letter-spacing: 0em;
+    line-height: 1.3em;
+    direction: ltr;
+    text-align: center;
+    font-weight: 60000%;
 }

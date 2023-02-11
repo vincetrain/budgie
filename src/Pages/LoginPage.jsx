@@ -10,10 +10,10 @@ function LoginPage() {
                 <div className="WordsContainer">
                     <h1>Login</h1>
                     <p>Please Enter Your Email and Password</p>
-                    <div className="Input Spaces">
-                        <h4>Email</h4>
+                    <div className="InputSpaces">
+                        <h4>EMAIL</h4>
 
-                        <h4>Password</h4>
+                        <h4>PASSWORD</h4>
 
                     </div>
                 </div>

@@ -54,9 +54,13 @@ function ShortGoals(){
     <div className="pageContainer">
 
         <div className="headingsContainer">
-            <h6>All Abt The Future</h6>
-            <h1>YOUR LONG TERM GOALS</h1>
-            <img src={arrow} alt="The Back Arrow" />
+            <h6>All Abt The NOW</h6>
+            <h1>YOUR SHORT TERM GOALS</h1>
+
+            <a href="/Goals">
+                <img src={arrow} alt="The Back Arrow" />
+            </a>
+
         </div>
 
         <div className= "searchBarContainer"> 

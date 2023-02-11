@@ -8,6 +8,7 @@
     background-position: top;
     background-position-y: 20%;
     height: 900px;
+    background-size: cover;
 }
 
 .BoxContainer {

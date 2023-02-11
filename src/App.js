@@ -1,8 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { PieChart, Pie} from 'recharts';
+import {PieChart, Pie, Label} from 'recharts';
 
+// function CustomLabel({ viewBox, value1}) {
+//   console.log(viewBox, "v");
+//   const { cx, cy } = viewBox;
+//   return (
+//     <svg
+//       className="recharts-text recharts-label"
+//       textAnchor="middle"
+//       dominantBaseline="central"
+//     >
+//       <text x={cx} y={cy} fill="#3d405c">
+//         <tspan x={cx} dy="0em" alignmentBaseline="middle" fontSize="26" color="white">
+//           {value1}
+//         </tspan>
+//       </text>
+//     </svg>
+//   );
+// }
+
+const CustomLabel  = React.createClass({ 
+  render() {  
+        return (
+          <g>
+            <foreignObject x={0} y={0} width={100} height={100}>
+              <div>Label</div>
+            </foreignObject>
+          </g>
+        );
+  }
+});
 
 function App() {
   
@@ -32,7 +60,13 @@ function App() {
 
         <p>Home & Utilities</p>
         <PieChart width={700} height={700}>
-          <Pie data={[data[0], {name: 'fill', money: totalMoney-data[0].money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#004A62" innerRadius={150} startAngle={90} endAngle={-360}/>
+          <Pie data={[data[0], {name: 'fill', money: totalMoney-data[0].money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#004A62" innerRadius={150} startAngle={90} endAngle={-360} label="30%"/>
+          
+          {/* <Label
+          width={30}
+          position="center"
+          content={<CustomLabel value1={"ok"}/>}
+        ></Label> */}
         </PieChart>
         <p>${data[0].money}</p>
 

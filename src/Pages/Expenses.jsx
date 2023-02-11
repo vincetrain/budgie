@@ -59,7 +59,11 @@ function Expenses() {
 			</div>
 		</section>
 
-		<button onClick={togglePopup}>Add Expenses</button>
+
+
+	<div id="block"></div>
+
+		<button id="addBtn" onClick={togglePopup}>View Expenses</button>
 
 	  {isOpen && <Popup
       content={<>

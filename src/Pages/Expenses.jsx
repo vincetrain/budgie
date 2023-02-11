@@ -6,11 +6,11 @@ import Popup from './Popup';
 
 
 const data = [
-	{name: 'homeUtil', money: 4600, fill: '#004A62'},
-	{name: 'food', money: 2300, fill: '#347571'},
-	{name: 'leisure', money: 1720, fill: '#35B276'},
-	{name: 'transport', money: 230, fill: '#B8E28A'},
-	{name: 'other', money: 1150, fill: '#C6EDB3'}
+	{name: 'Home & Utility', money: 4600, fill: '#004A62'},
+	{name: 'Food', money: 2300, fill: '#347571'},
+	{name: 'Leisure', money: 1720, fill: '#35B276'},
+	{name: 'Transportation', money: 230, fill: '#B8E28A'},
+	{name: 'Other', money: 1150, fill: '#C6EDB3'}
 ];
 
 function Expenses() {
@@ -32,11 +32,12 @@ function Expenses() {
     let chartMap = data.map((expense, index) => {
 		console.log(expense)
 		return (
- 			<div className='smallChart' key={index}>
- 				<PieChart width={300} height={300}>
+ 			<div className='chart smallChart' key={index}>
+ 				<PieChart width={400} height={400}>
  					<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
  				</PieChart>
- 				<h2>{expense.name} | {expense.money} | {expense.money/totalMoney * 100}%</h2>
+ 				<h2>{expense.name}</h2> 
+				<p>${expense.money} | {expense.money/totalMoney * 100}%</p>
  			</div>
 		)
 	})
@@ -46,12 +47,16 @@ function Expenses() {
     <div className="expenseContainer">
         <section id='charts'>
 			<div id='total'>
-        		<PieChart width={500} height={500}>
-          			<Pie data={data} dataKey="money" outerRadius={250} fill="#ECF8E5" innerRadius={150} startAngle={90} endAngle={450}/>	
-        		</PieChart>	
+				<div className='chart'>
+        			<PieChart width={500} height={500}>
+          				<Pie data={data} dataKey="money" outerRadius={250} fill="#ECF8E5" innerRadius={150} startAngle={90} endAngle={450}/>	
+        			</PieChart>	
+				</div>
 				<h1>${totalMoney}</h1>
 			</div>
-			{chartMap}
+			<div id='infoCharts'>
+				{chartMap}
+			</div>
 		</section>
 
 		<button onClick={togglePopup}>Add Expenses</button>

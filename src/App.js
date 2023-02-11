@@ -7,11 +7,11 @@ import { PieChart, Pie} from 'recharts';
 function App() {
   
   const data = [
-    {name: 'homeUtil', money: 600},
-    {name: 'food', money: 500},
-    {name: 'leisure', money: 1720},
-    {name: 'transport', money: 230},
-    {name: 'other', money: 1130}
+    {name: 'homeUtil', money: 600, fill: '#ECF8E5'},
+    {name: 'food', money: 500, fill: '#5EC57E'},
+    {name: 'leisure', money: 1720, fill: '#347571'},
+    {name: 'transport', money: 230, fill: '#2B9987'},
+    {name: 'other', money: 1130, fill: '#00717B'}
   ];
   
   return (

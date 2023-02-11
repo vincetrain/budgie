@@ -3,7 +3,16 @@
     src: url("../Fonts/OpenSauce.ttf");
 }
 
+.pageContainer {
+    background-image: url("../Components/short term goals background.png");
+    background-position: top;
+    background-position-x: 40%;
+    background-position-y: 35%;
+    height: 900px;
+}
+
 .headingsContainer {
+    background-size: contain;
     font-size: 20px;
     letter-spacing: 0.2em;
     font-family: "OpenSauce";
@@ -19,14 +28,14 @@
     width: 100%;
     color: #347571;
     letter-spacing: 0.01em; 
-    padding: 100%;
+    padding-top: 0.5%;
     line-height: 0em;
     direction: ltr;
     text-align: center;
 }
 
 .headingsContainer img {
-    right: 500px;
+    right: 450px;
     bottom: 65px;
     width: 60px;
     height: auto;

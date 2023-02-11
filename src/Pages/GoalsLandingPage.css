@@ -3,6 +3,7 @@
 }
 
 .TermContainer {
+    text-align: center;
     margin: auto;
     width: 40%;
     height: 20lh;
@@ -12,6 +13,7 @@
 .TermContainer h1 {
     display: flex;
     justify-content: center;
+    color: #61c47f;
 }
 
 .TermTitle {
@@ -19,8 +21,8 @@
 
 .TermBox {
     display: inline-block;
+    border-radius: 25px;
     background-color: #c8ecb4;
-    width: 40%;
+    width: 100%;
     height: 70%;
-    border: 3px solid red;
 }

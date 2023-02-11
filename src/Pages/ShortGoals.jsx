@@ -2,8 +2,69 @@ import "./ShortGoals.css"
 import arrow from "../Components/arrow.png";
 import bg from "../Components/short term goals background.png";
 import searchy from "../Components/Magnifying Glass.svg";
+import {useState, useEffect} from 'react'
+
+
+function addGoals() {
+    <div>
+        <div className = "formFill">
+            <input type="text" id="Goal" name="Goal" placeholder="Enter Savings Goal..."/>
+            <input type="text" id="Date" name="Date" placeholder=" DD/MM/YY"/>
+            <input type="text" id="Amount" name="Amount" placeholder="$"/>
+        </div>
+        <div className = "formDivider">
+        </div>
+    </div>
+    
+}
 
 function ShortGoals(){    
+
+    const [data, setData] = useState({
+        goal: null,
+        date: null,
+        amount: null
+    });
+
+    const [goals, addGoal] = useState([])
+
+    let Goals = goals.map(data => 
+        <div className='goal'>
+            <div className = 'formFill readonly'>
+                <input readOnly type="text" id="Goal" name="Goal" value = {data.goal} />
+                <input readOnly type="text" id="Date" name="Date" value = {data.date} />
+                <input readOnly type="text" id="Amount" name="Amount" value = {data.amount}/>
+            </div>
+            <div className = "formDivider" />
+        </div>
+        );
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!Object.values(data).every(o => o === null)) {
+            addGoal([...goals, data]);
+            setData({
+                goal: null,
+                date: null,
+                amount: null
+            })
+        }
+    }
+
+    const handleChange = event => {
+        const value = event.target.value;
+
+        setData({
+            ...data,
+            [event.target.name]: value
+        })
+    }
+
+    useEffect(() => {
+        // Update the document title using the browser API
+      });
+    
+
     return (
     <div className="pageContainer">
 
@@ -19,19 +80,31 @@ function ShortGoals(){
         </div>
 
         <div className="listsContainer">
-
             <div className="GoalsContainer">
-
+                <p className="listsTitles">Goal</p>
             </div>
-
+           
             <div className = "DateContainer">
-
+                <p className="listsTitles">Date</p>
             </div>
 
-            <div className = "EarnedContainer">
-
-
+            <div className = "AmountContainer">
+                <p className="listsTitles">Amount</p>
             </div>
+        </div>
+
+        <form id='submitform' className = "formFill" onSubmit={handleSubmit}>
+            <input type="text" id="Goal" name="goal" placeholder="Enter Savings Goal..." onChange={handleChange} value={data.goal}/>
+            <input type="text" id="Date" name="date" placeholder=" DD/MM/YY" onChange={handleChange} value={data.date}/>
+            <input type="text" id="Amount" name="amount" placeholder="$" onChange={handleChange} value={data.amount}/>
+        </form>
+        <div className = "formDivider">
+        </div>
+
+        {Goals}
+
+        <div className = "addButton" id='submitform' type='submit' onClick={handleSubmit}>
+            <p>+</p>
         </div>
     </div>
     )

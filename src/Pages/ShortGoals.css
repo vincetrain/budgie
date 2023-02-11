@@ -23,7 +23,6 @@
 }
 
 .headingsContainer h6 {
-    border: 1px solid green;
     font-size: 12px;
     text-transform: none;
     width: 100%;
@@ -36,7 +35,6 @@
 }
 
 .headingsContainer img {
-    border: 1px solid green;
     right: 450px;
     bottom: 65px;
     width: 60px;
@@ -48,7 +46,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    border: 1px solid green;
     top: 10px;
 }
 
@@ -66,7 +63,6 @@
 }
 
 .searchBarContainer input[type="text"]::placeholder {
-    border: 1px solid green;
     color: white;
     font-family: "OpenSauce";
     letter-spacing: 0.1em;
@@ -80,3 +76,89 @@
 
 }
 
+.listsContainer {
+    padding-top: 4%;
+    display: flex;
+    justify-content: center;
+}
+
+.listsTitles {
+    font-family: "OpenSauce";
+    color: #387578;
+    font-weight: bold;
+}
+
+.GoalsContainer {
+    padding-left: 13%;
+    padding-right: 13%;
+}
+
+.DateContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.AmountContainer {
+    padding-left: 7%;
+    padding-right: 7%;
+}
+
+.addButton {
+    border-radius: 25px;
+    height: 4%;
+    width: 9%;
+    background-color: #35B276;
+    margin: auto;
+}
+
+.addButton:hover {
+    cursor: pointer;
+    background-color: #2d8259;
+}
+
+.addButton p {
+    color: white;
+    font-family: "OpenSauce";
+    font-weight: bold;
+    text-align: center;
+    padding-top: 6%;
+}
+
+.formFill {
+    display: flex;
+    justify-content: center;
+}
+
+.formFill input{
+    background-color: #c0e48c;
+    color: #387578;
+    outline-width: 0px;
+    border: 0px;
+    border-radius: 25px;
+    font-size: 120%;
+    padding: 1%;
+    margin: 3px;
+}
+
+#Goal {
+    width: 27%;
+    
+}
+#Date {
+    width: 11%;
+}
+#Amount {
+    width: 17%;
+}
+
+.formDivider {
+    margin: 1% auto;
+    width: 65%;
+    border-top: 3px solid #c5ecb4;
+    
+}
+
+.readonly {
+    caret-color: transparent;
+    cursor: default;
+}

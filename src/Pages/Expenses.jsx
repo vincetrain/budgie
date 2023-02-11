@@ -87,8 +87,8 @@ function Expenses() {
 		</div>
 
 		<div class="centering">
-		<input type="text" placeholder="Name of Expenses" />
-		<input type="number" placeholder="Cost ($)"/>
+		<input class="inputtingStuff" type="text" placeholder="Name of Expenses" />
+		<input class="inputtingStuff" type="number" placeholder="Cost ($)"/>
 		</div>
 		</form>
 

@@ -86,6 +86,23 @@ margin: 10px;
 
 }
 
-#centering{
-    margin: auto;
+.centering{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1 rem;
+}
+
+.inputtingStuff{
+    height:30px;
+	margin-top: 15px;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 30px;
+	border-radius: 30px;
+
+
 }

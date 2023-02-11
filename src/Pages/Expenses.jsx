@@ -1,8 +1,7 @@
 import './Expenses.scss';
-import {PieChart, Pie} from 'recharts';
+import {PieChart, Pie, ResponsiveContainer} from 'recharts';
 import React, { useState } from 'react';
 import Popup from './Popup';
-
 
 
 const data = [
@@ -33,9 +32,11 @@ function Expenses() {
 		console.log(expense)
 		return (
  			<div className='chart smallChart' key={index}>
- 				<PieChart width={400} height={400}>
- 					<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
- 				</PieChart>
+				<ResponsiveContainer width={400} height="100%">
+ 					<PieChart>
+ 						<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
+ 					</PieChart>
+				</ResponsiveContainer>
  				<h2>{expense.name}</h2> 
 				<p>${expense.money} | {expense.money/totalMoney * 100}%</p>
  			</div>
@@ -59,18 +60,36 @@ function Expenses() {
 			</div>
 		</section>
 
-		<button onClick={togglePopup}>Add Expenses</button>
+
+
+	<div id="block"></div>
+
+		<button id="addBtn" onClick={togglePopup}>View Expenses</button>
 
 	  {isOpen && <Popup
       content={<>
-		<form>
-		<label><input type="checkbox" />Home & Utilities</label>
-		<label><input type="checkbox" />Food & Groceries</label>
-		<label><input type="checkbox" />Leisure</label>
-		<label><input type="checkbox" />Transport</label>
-		<label><input type="checkbox" />Other</label>
+		<form id="inputsNeeded">
+		<div class="centering">
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Home & Utilities</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Food & Groceries</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Leisure</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Transport</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Other</label>
+		</div>
+
+		<div class="centering">
 		<input type="text" placeholder="Name of Expenses" />
 		<input type="number" placeholder="Cost ($)"/>
+		</div>
 		</form>
 
       </>}

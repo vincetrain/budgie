@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'OpenSauce', 'NotoSansSyltotiNagri';
+    src: url('../Fonts/OpenSauce.ttf'), url('../Fonts/NotoSansSylotiNagri-Regular.ttf');
+}
+
 nav {
-	font-family: Georgia;
+	font-family: NotoSansSylotiNagri;
 	top: 0;
 	width: 100%;
 	height: 64px;

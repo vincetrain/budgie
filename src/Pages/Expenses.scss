@@ -41,3 +41,48 @@
 		}
 	}
 }
+
+
+#block{
+    margin-top: 100px;
+}
+
+#addBtn{
+
+        padding: 1vh 1vw;
+        width: 10vw;
+        height: 2vw;
+        background-color: white;
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
+        z-index: 10001;
+        border-radius: 15px;
+        outline: 5px solid #2B9987;
+
+        position: absolute;
+right: 10px;
+top: 5px;
+margin-top: 8px;
+border: none;
+}
+
+.checkboxCSS{
+    width: 1.75rem;
+    height: 1.75rem;
+    color: #35B276;
+    vertical-align: middle;
+    background: none;
+    border: 0;
+    outline: 0;
+    flex-grow: 0;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    transition: background 300ms;
+    cursor: pointer;
+
+margin: 10px;
+
+}
+
+#centering{
+    margin: auto;
+}

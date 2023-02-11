@@ -4,9 +4,9 @@ import bg from "../Components/Landing Page Background.png";
 function Home() {
 	
 	return (
-		<div className = "pageContainer">
+		<div className = "landingContainer">
 
-			<button id = "addBtn">Get Started</button>
+			<button id = "addBtn2">Get Started</button>
 		</div>		
 	);
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-<<<<<<< HEAD
 import Home from './Pages/Home.jsx';
 
 import Navbar from './Components/Navbar.jsx';
@@ -17,6 +16,8 @@ root.render(
 		<Navbar />		
 		<Routes>
 			<Route path='/' element={<Home />} />
+			<Route path='/expenses' element={<App />} />
+
 		</Routes>
 	</BrowserRouter>
 );

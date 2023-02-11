@@ -1,6 +1,7 @@
 import "./ShortGoals.css"
 import arrow from "../Components/arrow.png";
 import bg from "../Components/short term goals background.png";
+import searchy from "../Components/Magnifying Glass.svg";
 
 function ShortGoals(){    
     return (
@@ -13,7 +14,8 @@ function ShortGoals(){
         </div>
 
         <div className= "searchBarContainer"> 
-
+            <input type="text" placeholder=" Search.."/>
+            <img src={searchy} alt="Magnifying Class" />
         </div>
 
         <div className="listsContainer">

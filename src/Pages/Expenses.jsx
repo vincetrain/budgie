@@ -1,8 +1,7 @@
 import './Expenses.scss';
-import {PieChart, Pie} from 'recharts';
+import {PieChart, Pie, ResponsiveContainer} from 'recharts';
 import React, { useState } from 'react';
 import Popup from './Popup';
-
 
 
 const data = [
@@ -33,9 +32,11 @@ function Expenses() {
 		console.log(expense)
 		return (
  			<div className='chart smallChart' key={index}>
- 				<PieChart width={400} height={400}>
- 					<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
- 				</PieChart>
+				<ResponsiveContainer>
+ 					<PieChart width={400} height={400}>
+ 						<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
+ 					</PieChart>
+				</ResponsiveContainer>
  				<h2>{expense.name}</h2> 
 				<p>${expense.money} | {expense.money/totalMoney * 100}%</p>
  			</div>

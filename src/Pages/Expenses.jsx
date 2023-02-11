@@ -1,6 +1,8 @@
 import './Expenses.scss';
-import React from 'react';
 import {PieChart, Pie} from 'recharts';
+import React, { useState } from 'react';
+import Popup from './Popup';
+
 
 
 const data = [
@@ -13,13 +15,19 @@ const data = [
 
 function Expenses() {
   
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+  setIsOpen(!isOpen);
+  }
+  
     let totalMoney = 0;
     for (let i = 0; i < data.length; i++) {
       totalMoney += data[i].money;
     }
 
-    console.log((data[0].money/totalMoney) * 360);
-    console.log();
+
 
     let chartMap = data.map((expense, index) => {
 		console.log(expense)
@@ -34,6 +42,7 @@ function Expenses() {
 	})
 
   return (
+    
     <div className="expenseContainer">
         <section className='charts'>
 			<div id='total'>
@@ -44,7 +53,19 @@ function Expenses() {
 			</div>
 			{chartMap}
 		</section>
+
+		<button onClick={togglePopup}>Add Expenses</button>
+
+
+	  {isOpen && <Popup
+      content={<>
+        <b>Input Your Expense</b>
+        <p>YOOODLE consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </>}
+      handleClose={togglePopup}
+    />}
     </div>
+    
   );
 }
 

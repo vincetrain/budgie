@@ -12,6 +12,12 @@ import Navbar from './Components/Navbar.jsx';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+let user = {
+	name: 'user',
+	expenses: [{name: 'Mortgage', category: 'Home & Utility', cost: 3300}, {name: 'McDonalds Big Mac', category: 'Food', cost: 30}],
+	goals: [{goal: 'Save for car', date: '04/20/23', amount: 7600}]
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<BrowserRouter>

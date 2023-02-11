@@ -37,4 +37,7 @@ nav {
 	align-items: center;
 	display: flex;
 	top: 15%;
+	&:hover{
+		color: white;
+	}
 }

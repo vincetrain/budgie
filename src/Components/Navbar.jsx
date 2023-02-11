@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom'
 import './Navbar.scss';
-import logo from '../Components/BudgieLogoWhite.png';
+import logo from '../Components/BudgieLogo.png';
 
 function Navbar() {
 	return (
 		<nav>
 			<li>
-				<a href="/Home">
+				<a href="./">
 				<img id = "logos" src={logo} alt="Budgie Pig Buddy" />
 				</a>
 				

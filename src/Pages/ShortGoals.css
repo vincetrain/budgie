@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'OpenSauce';
+    src: url("../Fonts/OpenSauce.ttf");
+}
+
+.headingsContainer {
+    font-family: "OpenSauce";
+    color: #5ec57e;
+    text-align: center;
+    line-height: 1.28em;
+    direction: ltr;
+}
+
+.headingsContainer h6 {
+    text-transform: none;
+    width: 100%;
+    color: #347571;
+    letter-spacing: 0em; 
+    line-height: 1.3em;
+    direction: ltr;
+    text-align: center;
+}
+
+.headingsContainer img {
+    right: 500px;
+    bottom: 65px;
+    width: 60px;
+    height: auto;
+    position: relative;
+}

@@ -1,10 +1,12 @@
-
+import "./Home.scss";
+import bg from "../Components/Landing Page Background.png";
 
 function Home() {
 	
 	return (
-		<div>
-			
+		<div className = "pageContainer">
+
+			<button id = "addBtn">Get Started</button>
 		</div>		
 	);
 }

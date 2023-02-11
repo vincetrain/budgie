@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import './index.scss';
+import Expenses from './Pages/Expenses.jsx';
 import Home from './Pages/Home.jsx';
 import ShortGoals from './Pages/ShortGoals.jsx';
 
@@ -15,8 +15,9 @@ root.render(
 		<Navbar />		
 		<Routes>
 			<Route path='/' element={<Home />} />
-			<Route path='/expenses' element={<App />} />
-      <Route path='/ShortGoals' element={<ShortGoals />} />
+      		<Route path='/ShortGoals' element={<ShortGoals />} />
+			<Route path='/expenses' element={<Expenses />} />
+
 		</Routes>
 	</BrowserRouter>
 );

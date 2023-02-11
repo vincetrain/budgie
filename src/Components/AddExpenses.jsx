@@ -6,23 +6,35 @@ function AddExpense({state, changeState}) {
         name: null,
         cost: null,
         category: null
-        })
+        });
+
+    const [expenses, addExpense] = useState([]);
+
+    const [selectedButton, changeSelected] = useState({
+        id: null
+    })
 
     function handleClick() {
         changeState(false);
     }
 
     function changeCategory(e) {
-        
+        changeSelected({
+            id: e.target.id
+        })
+
+        updateExpense({
+            ...newExpense,
+            category: e.value
+        })
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-        const newExpense = {
-            name: newExpense.name,
-            cost: newExpense.cost,
-            category: newExpense.category
-        }
+        addExpense([
+            ...expenses,
+            newExpense
+        ]) 
     }
 
     function handleChange(e) {
@@ -44,11 +56,16 @@ function AddExpense({state, changeState}) {
                 <span className='divider' />
                 <form id="inputsNeeded" onSubmit={(e) => handleSubmit(e)}>
                     <div className="ExpenseCategories">
-                        <input class="checkboxCSS" id = "Home" value = "Home & Utilities" type="button" onClick={(e) => changeCategory}/>
-                        <input class="checkboxCSS" id = "Food" value = "Food & Groceries" type="button" />
-                        <input class="checkboxCSS" id = "Leisure" value = "Leisure" type="button" />
-                        <input class="checkboxCSS" id = "Transport" value = "Transport" type="button" />
-                        <input class="checkboxCSS" id = "Other" value = "Other" type="button" />
+                        <input name="checkboxCSS" id = "Home" type="radio" onClick={(e) => changeCategory(e)}/>
+                        <label className={`${selectedButton.id == 'Home' ? 'selected' : ''}`} id="Home" for="Home">Home & Utilities</label>
+                        <input name="checkboxCSS" id = "Food" type="radio" onClick={(e) => changeCategory(e)}/>
+                        <label className={`${selectedButton.id == 'Food' ? 'selected' : ''}`} id="Food" for="Food">Food & Groceries</label>
+                        <input name="checkboxCSS" id = "Leisure" type="radio" onClick={(e) => changeCategory(e)}/>
+                        <label className={`${selectedButton.id == 'Leisure' ? 'selected' : ''}`} id="Leisure" for="Leisure">Leisure</label>
+                        <input name="checkboxCSS" id = "Transport" type="radio" onClick={(e) => changeCategory(e)}/>
+                        <label className={`${selectedButton.id == 'Transport' ? 'selected' : ''}`} id="Transport" for="Transport">Transport</label>
+                        <input name="checkboxCSS" id = "Other" type="radio" onClick={(e) => changeCategory(e)}/>
+                        <label className={`${selectedButton.id == 'Other' ? 'selected' : ''}`} id="Other" for="Other">Other</label>
                     </div>
 
                     <div id = "ExpenseText">
@@ -56,7 +73,7 @@ function AddExpense({state, changeState}) {
                         <a id = "DollarSign">$</a>
                         <input type="text" id = "ExpenseCost" placeholder="Cost" onChange={(e) => handleChange(e)} required/>
                     </div>
-                    <input type="submit" id = "submitExpense" value="Add Expense"></input>
+                    <input type="submit" id = "submitExpense" onClick={handleClick} value="Add Expense"></input>
                 </form>
                 
 

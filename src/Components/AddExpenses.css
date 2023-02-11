@@ -66,7 +66,17 @@
     justify-content: center;
 }
 
-.ExpenseCategories input {
+.ExpenseCategories input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0; 
+} 
+
+.ExpenseCategories label{
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     outline: none;
     border: none;
     color: white;
@@ -81,13 +91,13 @@
     margin-bottom: 4%;
 }
 
-.ExpenseCategories input:hover {
-    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
-    cursor: pointer;
+.selected {
+    background-image: linear-gradient(rgb(0 0 0/70%) 0 0);
 }
 
-.ExpenseCategories input:active {
-    background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+.ExpenseCategories label:hover {
+    background-image: linear-gradient(rgb(0 0 0/70%) 0 0);
+    cursor: pointer;
 }
 
 #Home {
@@ -173,4 +183,3 @@
     color: #60c47c;
     
 }
-

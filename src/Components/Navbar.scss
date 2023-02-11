@@ -1,10 +1,18 @@
+@font-face {
+    font-family: 'OpenSauce', 'NotoSansSyltotiNagri';
+    src: url('../Fonts/OpenSauce.ttf'), url('../Fonts/NotoSansSylotiNagri-Regular.ttf');
+}
+
 nav {
+	font-family: NotoSansSylotiNagri;
 	top: 0;
+	width: 100%;
 	height: 64px;
 	background-color: #35B276;
 	z-index: 9999;
 	position: sticky;
 	display: flex;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.3);
 	li {
 		list-style-type: none;	
 		margin: auto 0;
@@ -16,7 +24,7 @@ nav {
 			font-size: 2.5vh;
 			margin: 0 2.5vw;
 			text-decoration: none;
-			color: black;
+			color: #034440;
 		}
 	}
 }

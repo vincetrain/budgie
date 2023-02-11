@@ -1,4 +1,10 @@
+@font-face {
+    font-family: 'OpenSauce', 'NotoSansSyltotiNagri';
+    src: url('./Fonts/OpenSauce.ttf'), url('./Fonts/NotoSansSylotiNagri-Regular.ttf');
+}
+
 html {
+	font-family: OpenSauce;
 	body {
 		margin: 0;
 		padding: 0;

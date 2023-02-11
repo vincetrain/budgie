@@ -1,16 +1,15 @@
 import './Expenses.scss';
-import {PieChart, Pie} from 'recharts';
+import {PieChart, Pie, ResponsiveContainer} from 'recharts';
 import React, { useState } from 'react';
 import Popup from './Popup';
 
 
-
 const data = [
-	{name: 'homeUtil', money: 4600, fill: '#004A62'},
-	{name: 'food', money: 2300, fill: '#347571'},
-	{name: 'leisure', money: 1720, fill: '#35B276'},
-	{name: 'transport', money: 230, fill: '#B8E28A'},
-	{name: 'other', money: 1150, fill: '#C6EDB3'}
+	{name: 'Home & Utility', money: 4600, fill: '#004A62'},
+	{name: 'Food', money: 2300, fill: '#347571'},
+	{name: 'Leisure', money: 1720, fill: '#35B276'},
+	{name: 'Transportation', money: 230, fill: '#B8E28A'},
+	{name: 'Other', money: 1150, fill: '#C6EDB3'}
 ];
 
 function Expenses() {
@@ -32,11 +31,14 @@ function Expenses() {
     let chartMap = data.map((expense, index) => {
 		console.log(expense)
 		return (
- 			<div className='smallCharts'>
- 				<PieChart width={700} height={700}>
- 					<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#004A62" innerRadius={150} startAngle={90} endAngle={-360} />
- 				</PieChart>
- 				<h2>{expense.name} | {expense.money} | {expense.money/totalMoney * 100}%</h2>
+ 			<div className='chart smallChart' key={index}>
+				<ResponsiveContainer width={400} height="100%">
+ 					<PieChart>
+ 						<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
+ 					</PieChart>
+				</ResponsiveContainer>
+ 				<h2>{expense.name}</h2> 
+				<p>${expense.money} | {expense.money/totalMoney * 100}%</p>
  			</div>
 		)
 	})
@@ -44,23 +46,38 @@ function Expenses() {
   return (
     
     <div className="expenseContainer">
-        <section className='charts'>
+        <section id='charts'>
 			<div id='total'>
+				<div className='chart'>
+        			<PieChart width={500} height={500}>
+          				<Pie data={data} dataKey="money" outerRadius={250} fill="#ECF8E5" innerRadius={150} startAngle={90} endAngle={450}/>	
+        			</PieChart>	
+				</div>
 				<h1>${totalMoney}</h1>
-        		<PieChart width={700} height={700}>
-          			<Pie data={data} dataKey="money" outerRadius={250} fill="#ECF8E5" innerRadius={150} startAngle={90} endAngle={450}/>	
-        		</PieChart>
 			</div>
-			{chartMap}
+			<div id='infoCharts'>
+				{chartMap}
+			</div>
 		</section>
 
-		<button onClick={togglePopup}>Add Expenses</button>
 
+
+	<div id="block"></div>
+
+		<button id="addBtn" onClick={togglePopup}>View Expenses</button>
 
 	  {isOpen && <Popup
       content={<>
-        <b>Input Your Expense</b>
-        <p>YOOODLE consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<form>
+		<label><input type="checkbox" />Home & Utilities</label>
+		<label><input type="checkbox" />Food & Groceries</label>
+		<label><input type="checkbox" />Leisure</label>
+		<label><input type="checkbox" />Transport</label>
+		<label><input type="checkbox" />Other</label>
+		<input type="text" placeholder="Name of Expenses" />
+		<input type="number" placeholder="Cost ($)"/>
+		</form>
+
       </>}
       handleClose={togglePopup}
     />}

@@ -28,11 +28,6 @@ function ShortGoals(){
         e.preventDefault();
         if (!Object.values(data).every(o => o === null)) {
             addGoal([...goals, data]);
-            setData({
-                goal: null,
-                date: null,
-                amount: null
-            })
         }
     }
 

@@ -12,6 +12,10 @@ function AddExpense({state, changeState}) {
         changeState(false);
     }
 
+    function changeCategory(e) {
+        
+    }
+
     function handleSubmit(e) {
         e.preventDefault();
         const newExpense = {
@@ -40,7 +44,7 @@ function AddExpense({state, changeState}) {
                 <span className='divider' />
                 <form id="inputsNeeded" onSubmit={(e) => handleSubmit(e)}>
                     <div className="ExpenseCategories">
-                        <input class="checkboxCSS" id = "Home" value = "Home & Utilities" type="button" />
+                        <input class="checkboxCSS" id = "Home" value = "Home & Utilities" type="button" onClick={(e) => changeCategory}/>
                         <input class="checkboxCSS" id = "Food" value = "Food & Groceries" type="button" />
                         <input class="checkboxCSS" id = "Leisure" value = "Leisure" type="button" />
                         <input class="checkboxCSS" id = "Transport" value = "Transport" type="button" />

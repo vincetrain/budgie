@@ -8,7 +8,7 @@ function ShortGoals(){
         <div className="headingsContainer">
             <h6>All Abt The Future</h6>
             <h1 >YOUR LONG TERM GOALS</h1>
-<img src={arrow} alt="The Back Arrow" />
+            <img src={arrow} alt="The Back Arrow" />
         </div>
         <div className= "searchBarContainer"> 
 

@@ -3,6 +3,7 @@ import React from 'react';
 import {PieChart, Pie} from 'recharts';
 
 
+
 function App() {
   
   const data = [
@@ -61,5 +62,20 @@ function App() {
   );
 }
 
+function handleClick(event) {
+  const modal = document.querySelector(".modal")
+  const closeBtn = document.querySelector(".close")
+  modal.style.display = "block";
+  closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+  })
+}
+
+<div class="modal">
+   <div class="modal_content">
+     <span class="close">&times;</span>
+     <p>I'm A Pop Up!!!</p>
+   </div>
+</div>
 
 export default App;

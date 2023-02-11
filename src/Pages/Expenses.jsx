@@ -1,10 +1,20 @@
 import './Expenses.scss';
-import React from 'react';
 import {PieChart, Pie} from 'recharts';
+import React, { useState } from 'react';
+
+
 
 
 function Expenses() {
   
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const togglePopup = () => {
+  setIsOpen(!isOpen);
+  }
+
+
   const data = [
     {name: 'homeUtil', money: 4600, fill: '#004A62'},
     {name: 'food', money: 2300, fill: '#347571'},
@@ -25,6 +35,9 @@ function Expenses() {
         <PieChart width={700} height={700}>
           <Pie data={data} dataKey="money" outerRadius={250} fill="#ECF8E5" innerRadius={150} startAngle={90} endAngle={450}/>
         </PieChart>
+
+        <button onClick={togglePopup}>Add Expenses</button>
+        
 
         <p>Home & Utilities</p>
         <PieChart width={700} height={700}>
@@ -56,8 +69,12 @@ function Expenses() {
         </PieChart>
         <p>${data[4].money} | {data[4].money/totalMoney * 100}%</p>
 
+
+
+
       </header>
     </div>
+    
   );
 }
 

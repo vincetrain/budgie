@@ -3,7 +3,16 @@
     src: url("../Fonts/OpenSauce.ttf");
 }
 
+.pageContainer {
+    background-image: url("../Components/short term goals background.png");
+    background-position: top;
+    background-position-x: 40%;
+    background-position-y: 35%;
+    height: 900px;
+}
+
 .headingsContainer {
+    background-size: contain;
     font-size: 20px;
     letter-spacing: 0.2em;
     font-family: "OpenSauce";
@@ -19,16 +28,50 @@
     width: 100%;
     color: #347571;
     letter-spacing: 0.01em; 
-    padding: 100%;
+    padding-top: 0.5%;
     line-height: 0em;
     direction: ltr;
     text-align: center;
 }
 
 .headingsContainer img {
-    right: 500px;
+    right: 450px;
     bottom: 65px;
     width: 60px;
     height: auto;
     position: relative;
 }
+
+.searchBarContainer {
+    display: flex;
+    justify-content: center;
+    padding-left: 10%;
+}
+
+.searchBarContainer input[type=text] {
+    background-color: #35B276;
+    color: white;
+    text-decoration-color: aliceblue;
+    border-radius: 10px;
+    border: none;
+    padding: 6px;
+    font-size: 10px;
+    letter-spacing: 0em;
+    line-height: 1.3em;
+
+}
+
+.searchBarContainer input[type="text"]::placeholder {
+    color: white;
+    font-family: "OpenSauce";
+    letter-spacing: 0.1em;
+}
+
+.searchBarContainer img {
+    height: 13px;
+    position: relative;
+    right: 25px;
+    padding-top: 5px;
+
+}
+

@@ -1,18 +1,22 @@
 nav {
-	margin: 0;
-	min-height: 100%;
-	height: 100%;
-	width: 10%;
+	top: 0;
+	height: 64px;
 	background-color: #35B276;
-	float: left;
 	z-index: 9999;
+	position: sticky;
+	display: flex;
 	li {
 		list-style-type: none;	
+		margin: auto 0;
 		a {
+			&:hover {
+				color: white;
+			}
+			display: inline-flex;	
+			font-size: 2.5vh;
+			margin: 0 2.5vw;
 			text-decoration: none;
-			display: block;
 			color: black;
-			padding: 1vh 0;
 		}
 	}
 }

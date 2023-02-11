@@ -1,18 +1,23 @@
 import "./ShortGoals.css"
 import arrow from "../Components/arrow.png";
+import bg from "../Components/short term goals background.png";
+import searchy from "../Components/Magnifying Glass.svg";
 
 function ShortGoals(){    
     return (
     <div className="pageContainer">
-        
+
         <div className="headingsContainer">
             <h6>All Abt The Future</h6>
-            <h1 >YOUR LONG TERM GOALS</h1>
+            <h1>YOUR LONG TERM GOALS</h1>
             <img src={arrow} alt="The Back Arrow" />
         </div>
-        <div className= "searchBarContainer"> 
 
+        <div className= "searchBarContainer"> 
+            <input type="text" placeholder=" Search.."/>
+            <img src={searchy} alt="Magnifying Class" />
         </div>
+
         <div className="listsContainer">
 
             <div className="GoalsContainer">

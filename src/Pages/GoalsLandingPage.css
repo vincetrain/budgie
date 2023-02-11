@@ -49,7 +49,6 @@
     justify-content: center;
     display: block;
     width: 80%;
-    
 }
 
 .TextBox h3 {
@@ -59,15 +58,25 @@
     margin-left: 20%;
     padding: 7%;
     border-radius: 100px;
+    margin-bottom: 7%;
 }
 
-.TextBox h4 {
+.viewButton {
+    margin-left: 20%;
     background-color: #5ec57e;
     justify-content: center;
     padding: 3%;
-    margin-left: 40%;
-    width: 200px;
+    padding-left: 20%;
+    padding-right: 20%;
     border-radius: 100px;
+    color: #2a5a57;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+}
+
+.viewButton:hover {
+    background-color: #56ad71;
 }
 
 .LilQuote p {

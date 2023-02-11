@@ -1,5 +1,6 @@
 import "./GoalsLandingPage.css"
 import "./ShortGoals.css"
+import {Link} from "react-router-dom";
 
 function GoalsPage() {
     return (
@@ -16,7 +17,7 @@ function GoalsPage() {
                             <h3></h3>
                             <h3></h3>
                             <h3></h3>
-                            <h4>View</h4>
+                            <Link to="/LongGoals" className="viewButton">View</Link>
                         </div>
 
                     </div>
@@ -29,7 +30,7 @@ function GoalsPage() {
                             <h3></h3>
                             <h3></h3>
                             <h3></h3>
-                            <h4>View</h4>
+                            <Link to="/ShortsGoals" className="viewButton">View</Link>
                         </div>
 
                     </div>

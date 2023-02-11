@@ -17,7 +17,6 @@ function GoalsPage(){
             <div className = "TermContainer">
                 <h1 classname = "TermTitle"> Short Term </h1>
                 <div className = "TermBox">
-                    
                 </div> 
             </div> 
         </div>

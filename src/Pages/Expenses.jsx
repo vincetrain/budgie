@@ -56,11 +56,18 @@ function Expenses() {
 
 		<button onClick={togglePopup}>Add Expenses</button>
 
-
 	  {isOpen && <Popup
       content={<>
-        <b>Input Your Expense</b>
-        <p>YOOODLE consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		<form>
+		<label><input type="checkbox" />Home & Utilities</label>
+		<label><input type="checkbox" />Food & Groceries</label>
+		<label><input type="checkbox" />Leisure</label>
+		<label><input type="checkbox" />Transport</label>
+		<label><input type="checkbox" />Other</label>
+		<input type="text" placeholder="Name of Expenses" />
+		<input type="number" placeholder="Cost ($)"/>
+		</form>
+
       </>}
       handleClose={togglePopup}
     />}

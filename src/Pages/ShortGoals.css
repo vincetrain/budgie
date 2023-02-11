@@ -6,12 +6,12 @@
 .pageContainer {
     background-image: url("../Components/short term goals background.png");
     background-position: top;
-    background-position-x: 40%;
     background-position-y: 35%;
     height: 900px;
 }
 
 .headingsContainer {
+    border: 1px solid green;
     background-size: contain;
     font-size: 20px;
     letter-spacing: 0.2em;
@@ -23,6 +23,7 @@
 }
 
 .headingsContainer h6 {
+    border: 1px solid green;
     font-size: 12px;
     text-transform: none;
     width: 100%;
@@ -35,6 +36,7 @@
 }
 
 .headingsContainer img {
+    border: 1px solid green;
     right: 450px;
     bottom: 65px;
     width: 60px;
@@ -45,7 +47,9 @@
 .searchBarContainer {
     display: flex;
     justify-content: center;
-    padding-left: 10%;
+    position: relative;
+    border: 1px solid green;
+    top: 10px;
 }
 
 .searchBarContainer input[type=text] {
@@ -62,6 +66,7 @@
 }
 
 .searchBarContainer input[type="text"]::placeholder {
+    border: 1px solid green;
     color: white;
     font-family: "OpenSauce";
     letter-spacing: 0.1em;

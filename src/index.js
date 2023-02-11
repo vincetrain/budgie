@@ -16,7 +16,7 @@ root.render(
 		<Navbar />		
 		<Routes>
 			<Route path='/' element={<Home />} />
-			<Route path='/expenses' element={<App />} />
+			<Route path='/expenses' element={<Expenses />} />
 
 		</Routes>
 	</BrowserRouter>

@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'OpenSauce';
+    src: url("../Fonts/OpenSauce.ttf");
+}
+
+.page h1 {
+    font-family: 'OpenSauce';
+    letter-spacing: 0.05em;
+    margin-top: 2%;
+    font-size: 250%;
+    color: #5ec57e;
+    line-height: 1.28em;
+    direction: ltr;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.boxes {
+    display: flex;
+    justify-content: center;
+    margin-left: 7%;
+    margin-right: 7%;
+    height: 80vh;
+    width: auto;
+    // border: 3px solid red;
+}
+
+.boxinbox {
+    // border: 3px solid black;
+    display: inline-block;
+    text-align: center;
+    transform: scale(1, 1);
+    overflow: hidden;
+    position: relative;
+    margin-top: 1%;
+    opacity: 1.0;
+    width: 90%;
+    padding: 5%;   
+}
+
+.boxinbox img {
+    height: 160px;
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boxinbox h3 {
+    color: #5ec57e;
+    letter-spacing: 0em;
+    font-family: "OpenSauce";
+    line-height: 1.28em;
+    direction: ltr;
+    font-size: 200%;
+    font-weight: lighter;
+}
+
+.boxinbox h5 {
+    margin-left: 0em;
+    font-size: 130%;
+    font-weight: lighter;
+    color: #347571;
+    letter-spacing: 0em;
+    font-family: "OpenSauce";
+    line-height: 1.3em;
+    direction: ltr;
+    text-align: center;
+}
+
+#toppled {
+    transform: rotate(270deg);
+    height: 100px;
+}
+
+#box1 {
+    background-color: #f7fdf3;
+}
+
+#box2 {
+    background-color: #ecf8e5;
+}

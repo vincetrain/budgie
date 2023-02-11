@@ -39,25 +39,25 @@ function App() {
         <PieChart width={700} height={700}>
           <Pie data={[data[1], {name: 'fill', money: totalMoney-data[0].money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#347571" innerRadius={150} startAngle={90} endAngle={-360}/>
         </PieChart>
-        <p>${data[1].money}</p>
+        <p>${data[1].money} | {data[1].money/totalMoney * 100}%</p>
 
         <p>Leisure</p>
         <PieChart width={700} height={700}>
           <Pie data={[data[2], {name: 'fill', money: totalMoney-data[0].money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#35B276" innerRadius={150} startAngle={90} endAngle={-360}/>
         </PieChart>
-        <p>${data[2].money}</p>
+        <p>${data[2].money} | {data[2].money/totalMoney * 100}%</p>
 
         <p>Transportation</p>
         <PieChart width={700} height={700}>
           <Pie data={[data[3], {name: 'fill', money: totalMoney-data[0].money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#B8E28A" innerRadius={150} startAngle={90} endAngle={-360}/>
         </PieChart>
-        <p>${data[3].money}</p>
+        <p>${data[3].money} | {data[3].money/totalMoney * 100}%</p>
 
         <p>Other</p>
         <PieChart width={700} height={700}>
           <Pie data={[data[4], {name: 'fill', money: totalMoney-data[0].money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#C6EDB3" innerRadius={150} startAngle={90} endAngle={-360}/>
         </PieChart>
-        <p>${data[4].money}</p>
+        <p>${data[4].money} | {data[4].money/totalMoney * 100}%</p>
 
       </header>
     </div>

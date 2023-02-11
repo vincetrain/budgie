@@ -1,0 +1,28 @@
+.landingContainer {
+    background-image: url("../Components/Landing Page Background.png");
+    background-position: top;
+    background-position-y: 60%;
+    height: 900px;
+    background-size: cover;
+
+}
+
+#addBtn2{
+    font-family: "OpenSauce";
+    letter-spacing: 0.2em;
+    padding: 1vh 1vw;
+    
+    background-color: white;
+    box-shadow: 0px 3px 7px rgb(0 0 0 / 30%);
+    
+    border-radius: 15px;
+    outline: 5px solid #2B9987;
+    
+    border: none;
+    overflow: hidden;
+    top: 68%;
+    left: 15%;
+    position: absolute;
+    opacity: 1.0;
+
+}

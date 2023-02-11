@@ -1,22 +1,7 @@
 import "./ShortGoals.css"
 import arrow from "../Components/arrow.png";
-import bg from "../Components/short term goals background.png";
 import searchy from "../Components/Magnifying Glass.svg";
 import {useState, useEffect} from 'react'
-import { Link } from 'react-router-dom'
-
-function addGoals() {
-    <div>
-        <div className = "formFill">
-            <input type="text" id="Goal" name="Goal" placeholder="Enter Savings Goal..."/>
-            <input type="text" id="Date" name="Date" placeholder=" DD/MM/YY"/>
-            <input type="text" id="Amount" name="Amount" placeholder="$"/>
-        </div>
-        <div className = "formDivider">
-        </div>
-    </div>
-    
-}
 
 function ShortGoals(){    
 

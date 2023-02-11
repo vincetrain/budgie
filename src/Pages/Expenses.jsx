@@ -1,4 +1,5 @@
 import './Expenses.scss';
+import AddExpense from "../Components/AddExpenses.jsx";
 import {PieChart, Pie, ResponsiveContainer} from 'recharts';
 import React, { useState } from 'react';
 import Popup from './Popup';
@@ -14,12 +15,11 @@ const data = [
 
 function Expenses() {
   
+    const [modalActive, setModalState] = useState(false);
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  const togglePopup = () => {
-  setIsOpen(!isOpen);
-  }
+    function openModal() {
+        setModalState(!modalActive);
+    }
   
     let totalMoney = 0;
     for (let i = 0; i < data.length; i++) {
@@ -60,41 +60,11 @@ function Expenses() {
 			</div>
 		</section>
 
-
-
-	<div id="block"></div>
-
-		<button id="addBtn" onClick={togglePopup}>Add Expenses</button>
-
-	  {isOpen && <Popup
-      content={<>
-		<form id="inputsNeeded">
-		<div class="centering">
-		<input class="checkboxCSS" type="checkbox" />
-		<label for ="checkboxCSS">Home & Utilities</label>
-
-		<input class="checkboxCSS" type="checkbox" />
-		<label for ="checkboxCSS">Food & Groceries</label>
-
-		<input class="checkboxCSS" type="checkbox" />
-		<label for ="checkboxCSS">Leisure</label>
-
-		<input class="checkboxCSS" type="checkbox" />
-		<label for ="checkboxCSS">Transport</label>
-
-		<input class="checkboxCSS" type="checkbox" />
-		<label for ="checkboxCSS">Other</label>
-		</div>
-
-		<div class="centering">
-		<input class="inputtingStuff" type="text" placeholder="Name of Expenses" />
-		<input class="inputtingStuff" type="number" placeholder="Cost ($)"/>
-		</div>
-		</form>
-
-      </>}
-      handleClose={togglePopup}
-    />}
+		<button id="addBtn" onClick={openModal}>View Expenses</button>
+		<AddExpense 
+			state={modalActive}
+            changeState={setModalState}
+            />
     </div>
     
   );

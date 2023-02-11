@@ -68,14 +68,28 @@ function Expenses() {
 
 	  {isOpen && <Popup
       content={<>
-		<form>
-		<label><input type="checkbox" />Home & Utilities</label>
-		<label><input type="checkbox" />Food & Groceries</label>
-		<label><input type="checkbox" />Leisure</label>
-		<label><input type="checkbox" />Transport</label>
-		<label><input type="checkbox" />Other</label>
+		<form id="inputsNeeded">
+		<div class="centering">
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Home & Utilities</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Food & Groceries</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Leisure</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Transport</label>
+
+		<input class="checkboxCSS" type="checkbox" />
+		<label for ="checkboxCSS">Other</label>
+		</div>
+
+		<div class="centering">
 		<input type="text" placeholder="Name of Expenses" />
 		<input type="number" placeholder="Cost ($)"/>
+		</div>
 		</form>
 
       </>}

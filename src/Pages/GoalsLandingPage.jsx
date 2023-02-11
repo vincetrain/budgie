@@ -30,7 +30,7 @@ function GoalsPage() {
                             <h3></h3>
                             <h3></h3>
                             <h3></h3>
-                            <Link to="/ShortsGoals" className="viewButton">View</Link>
+                            <Link to="/ShortGoals" className="viewButton">View</Link>
                         </div>
 
                     </div>

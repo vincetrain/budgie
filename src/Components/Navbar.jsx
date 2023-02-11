@@ -13,7 +13,6 @@ function Navbar() {
 				<Link to ='/'>Home</Link>
 				<Link to ='/Goals'>Goals</Link>
 				<Link to='/Expenses'>Expenses</Link>
-				<Link to='/Login'>Login</Link>
 			</li>
 		</nav>
 	);

@@ -32,9 +32,9 @@ function Expenses() {
     let chartMap = data.map((expense, index) => {
 		console.log(expense)
 		return (
- 			<div className='smallCharts'>
- 				<PieChart width={700} height={700}>
- 					<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={250} fill="#004A62" innerRadius={150} startAngle={90} endAngle={-360} />
+ 			<div className='smallChart' key={index}>
+ 				<PieChart width={300} height={300}>
+ 					<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
  				</PieChart>
  				<h2>{expense.name} | {expense.money} | {expense.money/totalMoney * 100}%</h2>
  			</div>
@@ -44,12 +44,12 @@ function Expenses() {
   return (
     
     <div className="expenseContainer">
-        <section className='charts'>
+        <section id='charts'>
 			<div id='total'>
-				<h1>${totalMoney}</h1>
-        		<PieChart width={700} height={700}>
+        		<PieChart width={500} height={500}>
           			<Pie data={data} dataKey="money" outerRadius={250} fill="#ECF8E5" innerRadius={150} startAngle={90} endAngle={450}/>	
-        		</PieChart>
+        		</PieChart>	
+				<h1>${totalMoney}</h1>
 			</div>
 			{chartMap}
 		</section>

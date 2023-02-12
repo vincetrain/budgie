@@ -5,15 +5,14 @@ import logo from '../Components/BudgieLogo.png';
 function Navbar() {
 	return (
 		<nav>
-			<li>
-				<a href="./">
+			<a href="./">
 				<img id = "logos" src={logo} alt="Budgie Pig Buddy" />
-				</a>
+			</a>
+			<li>
 				
 				<Link to ='/'>Home</Link>
 				<Link to ='/Goals'>Goals</Link>
 				<Link to='/Expenses'>Expenses</Link>
-				<Link to='/Login'>Login</Link>
 			</li>
 		</nav>
 	);

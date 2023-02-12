@@ -5,7 +5,59 @@
 
 .LogInPageContainer {
     background-image: url("../Components/short term goals background.png");
-    position: relative;
-    top: 1000px;
-    //background-size: cover;
+    background-position: top;
+    background-position-y: 0%;
+    height: 900px;
+    background-size: cover;
+}
+
+.ContentsContainer {
+    background-color: #f7fdf3;
+    margin: auto;
+    margin-top: 5%;
+    display: block;
+    border: 3px solid red;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    height: 76%;
+}
+
+.WordsContainer {
+    font-family: "OpenSauce";
+    display: block;
+    border: 3px solid green;
+    padding: 1%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.WordsContainer h1 {
+    letter-spacing: 0.08em;
+    color: #5ec57e;
+    font-weight: lighter;
+    font-size: 220%;
+}
+
+.WordsContainer p {
+    margin-left: 0em;
+    text-transform: none;
+    color: #347571;
+    font-size: 140%;
+    letter-spacing: 0em;
+    line-height: 1.3em;
+    direction: ltr;
+}
+
+.InputSpaces h4 {
+    margin-left: 0em;
+    color: #347571;
+    letter-spacing: 0em;
+    line-height: 1.3em;
+    direction: ltr;
+    text-align: center;
+    font-weight: 60000%;
 }

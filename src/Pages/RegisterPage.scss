@@ -7,33 +7,28 @@
     background-image: url("../Components/short term goals background.png");
     background-position: top;
     background-position-y: 0%;
-    height: 810px;
+    height: 900px;
     background-size: cover;
 }
 
-.ContentsContainer {
+.ContentsContainer2 {
     background-color: #f7fdf3;
     margin: auto;
-    margin-top: 5%;
+    //margin-top: 5%;
     display: block;
-    //border: 3px solid #f7fdf3;
     justify-content: center;
     align-items: center;
-    box-shadow: 8px 10px 8px 10px #DCF4CE;
     text-align: center;
+    box-shadow: 8px 10px 8px 10px #DCF4CE;
     width: 60%;
-    height: 76%;
-}   
+    height: 97%;
+    margin-bottom: 30px;
+}
 
 .WordsContainer {
     font-family: "OpenSauce";
     display: block;
-    //border: 3px solid red;
-    position: relative;
-    top: 40px;
-    justify-content: center;
-    align-items: center;
-    vertical-align: middle;
+    padding: 1%;
     margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 10%;
@@ -60,7 +55,6 @@
 }
 
 .InputSpaces h4 {
-    border: 3px solid #f7fdf3;
     display: block;
     margin-left: 0em;
     color: #347571;
@@ -72,7 +66,6 @@
 }
 
 .inputContainer {
-    border: 3px solid #f7fdf3;
     display: flex;
     margin-top: -1.5em;
     justify-content: center;
@@ -102,22 +95,18 @@
 
 .AccountPromptContainer {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 10px;
+    margin-left: 10px;
     text-decoration: none;
 }
 
 #registrationButton {
-    margin-left: 10px;
     font-weight: bolder;
 }
 
 .LogInButton {
     display: flex;
     justify-content: center;
-    text-align: center;
-    margin-top: -1%;
+    margin-top: 3%;
     margin-left: 10%;
     margin-right: 10%;
     align-items: center;
@@ -128,7 +117,6 @@
     letter-spacing: 0.1em;
     color: white;
     width: 20%;
-    text-align: center;
     border-radius: 110px;
     font-family: "OpenSauce";
     padding: 0.3em;

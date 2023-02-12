@@ -39,9 +39,11 @@ function RegisterPage() {
                         </a>
                     </div>
 
+					<a href='/Expenses'>
                     <div className="LogInButton">
-                        <p>Login</p>
+                        <p>Sign Up</p>
                     </div>
+					</a>
 
                 </div>
 

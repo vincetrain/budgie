@@ -1,7 +1,10 @@
 import './LoginPage.scss';
+import { useNavigate } from 'react-router-dom';
 
 function LoginPage() {
-    return (
+	let navigate = useNavigate();  
+
+	return (
 
         <div className="LogInPageContainer">
 
@@ -30,9 +33,11 @@ function LoginPage() {
                         </a>
                     </div>
 
+					<a href='/Expenses'>
                     <div className = "LogInButton">
                         <p>Login</p>
                     </div>
+					</a>
 
                 </div>
 

@@ -123,6 +123,14 @@
     align-items: center;
 }
 
+.LogInButton:hover {
+	cursor: pointer;
+}
+
+.LogInPageContainer a {
+	text-decoration: none;
+}
+
 .LogInButton p {
     background-color: #35B276;
     letter-spacing: 0.1em;

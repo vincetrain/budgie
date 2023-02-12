@@ -16,21 +16,19 @@
     margin: auto;
     margin-top: 5%;
     display: block;
-    border: 3px solid #f7fdf3;
+    //border: 3px solid #f7fdf3;
     justify-content: center;
     align-items: center;
     box-shadow: 8px 10px 8px 10px #DCF4CE;
     text-align: center;
     width: 60%;
     height: 85%;
-}
+}   
 
 .WordsContainer {
     font-family: "OpenSauce";
-    display: block;
-    border: 3px solid #f7fdf3;
-    padding: 1%;
-    margin-top: 5%;
+    display: flex;
+    margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 10%;
     margin-right: 10%;

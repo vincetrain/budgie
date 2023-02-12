@@ -33,13 +33,13 @@ function RegisterPage() {
 
                     <div className="AccountPromptContainer">
                         <p>Already have an account?</p>
-                        <a href="/RegisterPage">
+                        <a href="/LoginPage">
                             <div class="spacer"></div>
                             <p id="registrationButton">SIGN IN</p>
                         </a>
                     </div>
 
-					<a href='/Expenses'>
+					<a href='/BudgetingBuddy'>
                     <div className="LogInButton">
                         <p>Sign Up</p>
                     </div>

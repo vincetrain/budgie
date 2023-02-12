@@ -33,7 +33,7 @@ function LoginPage() {
                         </a>
                     </div>
 
-					<a href='/Expenses'>
+					<a href='/BudgetingBuddy'>
                     <div className = "LogInButton">
                         <p>Login</p>
                     </div>

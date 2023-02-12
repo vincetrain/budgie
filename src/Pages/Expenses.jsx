@@ -66,7 +66,7 @@ function Expenses() {
 			</div>
 		</section>
 
-		<button id="addBtn" onClick={openModal}>View Expenses</button>
+		<button id="addBtn" onClick={openModal}>Add Expenses</button>
 		<AddExpense 
 			state={modalActive}
             changeState={setModalState}

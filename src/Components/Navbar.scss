@@ -31,12 +31,10 @@ nav {
 }
 
 #logos {
-	position: absolute;
-	width: 50px;
-	justify-content: center;
-	align-items: center;
-	display: flex;
-	top: 15%;
+	height: 44px;
+	margin-top: 1.4vh;
+	margin-left: 2.5vw;
+	margin-right: 2.5vw;
 	&:hover{
 		color: white;
 	}

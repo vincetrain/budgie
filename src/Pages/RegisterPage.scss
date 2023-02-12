@@ -11,16 +11,18 @@
     background-size: cover;
 }
 
-.ContentsContainer {
+.ContentsContainer2 {
     background-color: #f7fdf3;
     margin: auto;
-    margin-top: 5%;
+    //margin-top: 5%;
     display: block;
     justify-content: center;
     align-items: center;
     text-align: center;
+    box-shadow: 8px 10px 8px 10px #DCF4CE;
     width: 60%;
-    height: 76%;
+    height: 97%;
+    margin-bottom: 30px;
 }
 
 .WordsContainer {

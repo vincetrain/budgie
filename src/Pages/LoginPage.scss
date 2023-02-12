@@ -50,14 +50,77 @@
     letter-spacing: 0em;
     line-height: 1.3em;
     direction: ltr;
+    padding-bottom: -10;
+    margin-bottom: -10;
 }
 
 .InputSpaces h4 {
+    border: 3px solid green;
+    display: block;
     margin-left: 0em;
     color: #347571;
-    letter-spacing: 0em;
+    letter-spacing: 0.08em;
     line-height: 1.3em;
     direction: ltr;
     text-align: center;
-    font-weight: 60000%;
+    font-size: 130%;
+}
+
+.inputContainer {
+    border: 3px solid green;
+    display: flex;
+    margin-top: -1.5em;
+    justify-content: center;
+    position: relative;
+    top: 10px;
+}
+
+.inputContainer input[type=text] {
+    background-color: #b8e28a;
+    color: white;
+    text-decoration-color: aliceblue;
+    border-radius: 100px;
+    border: none;
+    width: 45%;
+    padding: 13px;
+    font-size: 20px;
+    letter-spacing: 0em;
+    line-height: 1.3em;
+
+}
+
+.inputContainer input[type="text"]::placeholder {
+    color: white;
+    font-family: "OpenSauce";
+    letter-spacing: 0.2em;
+}
+
+.AccountPromptContainer {
+    display: flex;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+#registrationButton {
+    font-weight: bolder;
+}
+
+.LogInButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-items: center;
+}
+
+.LogInButton p {
+    background-color: #35B276;
+    letter-spacing: 0.1em;
+    color: white;
+    width: 20%;
+    border-radius: 110px;
+    font-family: "OpenSauce";
+    padding: 0.3em;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.3);
 }

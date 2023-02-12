@@ -17,8 +17,8 @@ function ShortGoals(){
         <div className='goal'>
             <div className = 'formFill readonly'>
                 <input readOnly type="text" id="Goal" name="Goal" value = {data.goal} />
-                <input readOnly type="text" id="Date" name="Date" value = {data.date} />
-                <input readOnly type="text" id="Amount" name="Amount" value = {data.amount}/>
+                <input readOnly type="date" id="Date" name="Date" value = {data.date} />
+                <input readOnly type="number" id="Amount" name="Amount" value = {data.amount}/>
             </div>
             <div className = "formDivider" />
         </div>
@@ -79,8 +79,8 @@ function ShortGoals(){
 
         <form id='submitform' className = "formFill" onSubmit={handleSubmit}>
             <input type="text" id="Goal" name="goal" placeholder="Enter Savings Goal..." onChange={handleChange} value={data.goal}/>
-            <input type="text" id="Date" name="date" placeholder=" DD/MM/YY" onChange={handleChange} value={data.date}/>
-            <input type="text" id="Amount" name="amount" placeholder="$" onChange={handleChange} value={data.amount}/>
+            <input type="date" id="Date" name="date" placeholder=" DD/MM/YY" onChange={handleChange} value={data.date}/>
+            <input type="number" id="Amount" name="amount" placeholder="$" onChange={handleChange} value={data.amount}/>
         </form>
         <div className = "formDivider">
         </div>

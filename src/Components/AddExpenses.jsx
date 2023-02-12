@@ -1,21 +1,19 @@
 import './AddExpenses.css';
 import {useState} from 'react';
 
-function AddExpense({state, changeState}) {
+function AddExpense({state, changeState, addExpense, expenses, chartFills}) {
     const [newExpense, updateExpense] = useState({
-        name: null,
+        desc: null,
         cost: null,
         category: null
         });
-
-    const [expenses, addExpense] = useState([]);
 
     const [selectedButton, changeSelected] = useState({
         id: null
     })
 
     function handleClick() {
-        changeState(false);
+        changeState(!state)
     }
 
     function changeCategory(e) {
@@ -25,17 +23,23 @@ function AddExpense({state, changeState}) {
 
         updateExpense({
             ...newExpense,
-            category: e.value
+            category: e.target.id
         })
     }
 
     function handleSubmit(e) {
         e.preventDefault();
-        addExpense([
-            ...expenses,
-            newExpense
-        ]) 
-    }
+		console.log(newExpense)
+		addExpense([
+          ...expenses,
+              {
+                  desc: newExpense.desc,
+                  name: newExpense.category,
+                  money: newExpense.cost,
+                  fill: chartFills[newExpense.category]
+              }
+          ])
+ 	}
 
     function handleChange(e) {
         const value = e.target.value;
@@ -56,24 +60,25 @@ function AddExpense({state, changeState}) {
                 <span className='divider' />
                 <form id="inputsNeeded" onSubmit={(e) => handleSubmit(e)}>
                     <div className="ExpenseCategories">
-                        <input name="checkboxCSS" id = "Home" type="radio" onClick={(e) => changeCategory(e)}/>
-                        <label className={`${selectedButton.id == 'Home' ? 'selected' : ''}`} id="Home" for="Home">Home & Utilities</label>
+                        <input name="checkboxCSS" id = "HousingUtilities" type="radio" onClick={(e) => changeCategory(e)}/>
+                        <label className={`${selectedButton.id == 'HousingUtilities' ? 'selected' : ''}`} id="HousingUtilities" for="HousingUtilities">Home & Utilities</label>
+
                         <input name="checkboxCSS" id = "Food" type="radio" onClick={(e) => changeCategory(e)}/>
                         <label className={`${selectedButton.id == 'Food' ? 'selected' : ''}`} id="Food" for="Food">Food & Groceries</label>
                         <input name="checkboxCSS" id = "Leisure" type="radio" onClick={(e) => changeCategory(e)}/>
                         <label className={`${selectedButton.id == 'Leisure' ? 'selected' : ''}`} id="Leisure" for="Leisure">Leisure</label>
-                        <input name="checkboxCSS" id = "Transport" type="radio" onClick={(e) => changeCategory(e)}/>
-                        <label className={`${selectedButton.id == 'Transport' ? 'selected' : ''}`} id="Transport" for="Transport">Transport</label>
+                        <input name="checkboxCSS" id = "Transportation" type="radio" onClick={(e) => changeCategory(e)}/>
+                        <label className={`${selectedButton.id == 'Transportation' ? 'selected' : ''}`} id="Transportation" for="Transportation">Transport</label>
                         <input name="checkboxCSS" id = "Other" type="radio" onClick={(e) => changeCategory(e)}/>
                         <label className={`${selectedButton.id == 'Other' ? 'selected' : ''}`} id="Other" for="Other">Other</label>
                     </div>
 
                     <div id = "ExpenseText">
-                        <input type="text" id = "ExpenseName" placeholder="Name of Expenses" onChange={(e) => handleChange(e)} required/>
+                        <input name='desc' type="text" id = "ExpenseName" placeholder="Name of Expenses" onChange={(e) => handleChange(e)} required/>
                         <a id = "DollarSign">$</a>
-                        <input type="text" id = "ExpenseCost" placeholder="Cost" onChange={(e) => handleChange(e)} required/>
+                        <input name='cost' type="number" id = "ExpenseCost" placeholder="Cost" onChange={(e) => handleChange(e)} required/>
                     </div>
-                    <input type="submit" id = "submitExpense" onClick={handleClick} value="Add Expense"></input>
+                    <input type="submit" id = "submitExpense" value="Add Expense"></input>
                 </form>
                 
 

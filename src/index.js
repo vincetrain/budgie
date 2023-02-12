@@ -8,6 +8,7 @@ import ShortGoals from './Pages/ShortGoals.jsx';
 import LongGoals from './Pages/LongGoals.jsx';
 import BudgetingBuddy from './Pages/BudgetingBuddy.jsx';
 import LoginPage from './Pages/LoginPage.jsx';
+import RegisterPage from './Pages/RegisterPage.jsx';
 
 import Navbar from './Components/Navbar.jsx';
 
@@ -29,6 +30,7 @@ root.render(
 			<Route path='/LongGoals' element= {<LongGoals />} />
 			<Route path='/BudgetingBuddy' element= {<BudgetingBuddy />} />
 			<Route path='/LoginPage' element = {<LoginPage />} />
+			<Route path='/RegisterPage' element = {<RegisterPage />} />
 			<Route path='/Expenses' element={<Expenses />} />
      		<Route path='/goals' element={<GoalsPage />} />
 		</Routes>

@@ -3,18 +3,25 @@ import AddExpense from "../Components/AddExpenses.jsx";
 import {PieChart, Pie, ResponsiveContainer} from 'recharts';
 import React, { useState } from 'react';
 
-
-const data = [
-	{name: 'Home & Utility', money: 4600, fill: '#004A62'},
-	{name: 'Food', money: 2300, fill: '#347571'},
-	{name: 'Leisure', money: 1720, fill: '#35B276'},
-	{name: 'Transportation', money: 230, fill: '#B8E28A'},
-	{name: 'Other', money: 1150, fill: '#C6EDB3'}
-];
-
 function Expenses() {
   
     const [modalActive, setModalState] = useState(false);
+
+	const [data, setData] = useState([
+		{desc: 'Mortgage', name: 'Home & Utility', money: 4000, fill: '#004A62'},
+		{desc: 'McDonalds', name: 'Food', money: 500, fill: '#347571'},
+		{desc: 'Escape From Tarkov: EOD', name: 'Leisure', money: 160, fill: '#35B276'},
+		{desc: 'TTC', name: 'Transportation', money: 230, fill: '#B8E28A'},
+		{desc: 'Private School', name: 'Other', money: 500, fill: '#C6EDB3'}
+	]);
+
+	const chartFills = {
+		"Home & Utility" : "#004A62",
+		"Food" : "#347571",
+		"Leisure" : "#35B276",
+		"Transportation" : "#B8E28A",
+		"Other" : "C6EDB3"
+	}
 
     function openModal() {
         setModalState(!modalActive);
@@ -33,11 +40,11 @@ function Expenses() {
  			<div className='chart smallChart' key={index}>
 				<ResponsiveContainer width={400} height="100%">
  					<PieChart>
- 						<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
+ 						<Pie data={[expense, {name: 'fill', money: totalMoney-expense.money, fill: '#AFAFAF'}]} dataKey="money" nameKey="tag" outerRadius={107} fill="#004A62" innerRadius={64} startAngle={90} endAngle={-360} />
  					</PieChart>
 				</ResponsiveContainer>
  				<h2>{expense.name}</h2> 
-				<p>${expense.money} | {expense.money/totalMoney * 100}%</p>
+				<p>${expense.money} | {Math.round(expense.money/totalMoney * 10000)/100}%</p>
  			</div>
 		)
 	})
@@ -63,6 +70,9 @@ function Expenses() {
 		<AddExpense 
 			state={modalActive}
             changeState={setModalState}
+			addExpense={setData}
+			expenses={data}
+			chartFills={chartFills}
             />
     </div>
     

@@ -17,9 +17,9 @@ function ShortGoals(){
     let Goals = goals.map(data => 
         <div className='goal'>
             <div className = 'formFill readonly'>
-                <input readOnly type="text" id="Goal" name="Goal" value = {data.goal} />
-                <input readOnly type="date" id="Date" name="Date" value = {data.date} />
-                <input readOnly type="number" id="Amount" name="Amount" value = {data.amount}/>
+                <input type="text" id="Goal" name="Goal" placeholder="Enter Savings Goal..."/>
+                <input type="date" id="Date" name="Date" />
+                <input type="number" id="Amount" name="Amount" placeholder = "$"/>
             </div>
             <div className = "formDivider" />
         </div>

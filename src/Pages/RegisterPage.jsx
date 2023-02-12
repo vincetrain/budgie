@@ -1,11 +1,55 @@
-import "./RegisterPage.scss";
+import './RegisterPage.scss';
 
-function RegisterPage (){
-
+function RegisterPage() {
     return (
-        <div>
-            
+
+        <div className="LogInPageContainer">
+
+            <div className="ContentsContainer">
+
+                <div className="WordsContainer">
+
+                    <h1>Registration</h1>
+                    <p>Please Fill in the Information Below</p>
+                    
+                    <div className="InputSpaces">
+                        <h4>FIRST NAME</h4>
+                        <div className="inputContainer">
+                        <input type="text" placeholder="₍ᐢ.⚇.ᐢ₎"/>
+                        </div>
+                        <h4>LAST NAME</h4>
+                        <div className="inputContainer">
+                        <input type="text" placeholder="₍ᐢ.⚇.ᐢ₎"/>
+                        </div>
+                        <h4>EMAIL</h4>
+                        <div className="inputContainer">
+                        <input type="text" placeholder="₍ᐢ.⚇.ᐢ₎"/>
+                        </div>
+                        <h4>PASSWORD</h4>
+                        <div className="inputContainer">
+                        <input type="text" placeholder="₍ᐢ.⚇.ᐢ₎"/>
+                        </div>
+                    </div>
+
+                    <div className="AccountPromptContainer">
+                        <p>Already have an account?</p>
+                        <a href="/RegisterPage">
+                        <div class="spacer"></div>
+                        <p id="registrationButton">SIGN IN</p>
+                        </a>
+                    </div>
+
+                    <div className = "LogInButton">
+                        <p>Login</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
         </div>
+
     )
 }
 

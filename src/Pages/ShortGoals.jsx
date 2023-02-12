@@ -26,7 +26,7 @@ function ShortGoals(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!Object.values(data).every(o => o === null)) {
+        if (!(data.goal == null || data.date === null || data.amount === null || data.amount === "")) {
             addGoal([...goals, data]);
         }
     }
@@ -40,10 +40,6 @@ function ShortGoals(){
         })
     }
 
-    useEffect(() => {
-        // Update the document title using the browser API
-      });
-    
 
     return (
     <div className="pageContainer">

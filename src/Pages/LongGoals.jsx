@@ -27,8 +27,8 @@ function ShortGoals(){
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (!Object.values(data).every(o => o === null)) {
-            addGoal([...goals, data]);
+		if (!(data.goal == null || data.date === null || data.amount === null || data.amount === "")) {
+             addGoal([...goals, data]);
         }
     }
 

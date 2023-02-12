@@ -27,7 +27,13 @@
 
 .WordsContainer {
     font-family: "OpenSauce";
-    display: flex;
+    display: block;
+    //border: 3px solid red;
+    position: relative;
+    top: 40px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
     margin-top: 10%;
     margin-bottom: 10%;
     margin-left: 10%;

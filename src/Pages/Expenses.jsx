@@ -2,7 +2,6 @@ import './Expenses.scss';
 import AddExpense from "../Components/AddExpenses.jsx";
 import {PieChart, Pie, ResponsiveContainer} from 'recharts';
 import React, { useState } from 'react';
-import Popup from './Popup';
 
 
 const data = [

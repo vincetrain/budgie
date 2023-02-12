@@ -2,18 +2,17 @@ import './Expenses.scss';
 import AddExpense from "../Components/AddExpenses.jsx";
 import {PieChart, Pie, ResponsiveContainer} from 'recharts';
 import React, { useState } from 'react';
-import Popup from './Popup';
 
 function Expenses() {
   
     const [modalActive, setModalState] = useState(false);
 
 	const [data, setData] = useState([
-		{desc: 'Mortgage', name: 'Home & Utility', money: 4000, fill: '#004A62'},
-		{desc: 'McDonalds', name: 'Food', money: 500, fill: '#347571'},
-		{desc: 'Escape From Tarkov: EOD', name: 'Leisure', money: 160, fill: '#35B276'},
-		{desc: 'TTC', name: 'Transportation', money: 230, fill: '#B8E28A'},
-		{desc: 'Private School', name: 'Other', money: 500, fill: '#C6EDB3'}
+		{desc: 'Mortgage', name: 'Home & Utility', money: 4600, fill: '#004A62'},
+		{desc: 'McDonalds', name: 'Food', money: 2300, fill: '#347571'},
+		{desc: 'Escape From Tarkov: EOD', name: 'Leisure', money: 1500, fill: '#35B276'},
+		{desc: 'TTC', name: 'Transportation', money: 1200, fill: '#B8E28A'},
+		{desc: 'Private School', name: 'Other', money: 400, fill: '#C6EDB3'}
 	]);
 
 	const chartFills = {

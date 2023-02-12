@@ -1,5 +1,5 @@
 import './AddExpenses.css';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 
 function AddExpense({state, changeState}) {
     const [newExpense, updateExpense] = useState({
